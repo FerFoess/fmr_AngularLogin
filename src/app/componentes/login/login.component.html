@@ -10,6 +10,11 @@
       formControlName="email" />
     </div>
 
+    <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+      <div *ngIf="email.hasError('required')">El correo es requerido.</div>
+      <div *ngIf="email.hasError('email')">Email no valido.</div>
+    </small>
+
     <div class="field">
       <label for="password">Contraseña</label>
       <p-password
@@ -20,11 +25,17 @@
       </p-password>
 
     </div>
+    <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+      <div *ngIf="password.hasError('required')">La contraseña es requerida.</div>
+      <div *ngIf="password.hasError('password')">Contraseña no valida.</div>
+    </small>
+
 
     <button
     pButton pRipple label="Ingresar"
     class="p-button-success"
     class="w-full"
+    [disabled]="!loginForm.valid"
     ></button>
 
     <div class="mt-2">

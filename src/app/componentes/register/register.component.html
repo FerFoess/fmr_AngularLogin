@@ -1,1 +1,73 @@
-<p>register works!</p>
+<form [formGroup]="registerForm">
+  <p-card header="Ingresar" [style]="{width:'400px'}">
+
+
+    <div class="field">
+      <label for="username">Nombre Completo:</label>
+      <input pInputText
+      type="text"
+      class="w-full"
+      placeholder="Ingresa Nombre Completo"
+      formControlName="fullname"  />
+    </div>
+
+    <div class="field">
+      <label for="email">Correo Electronico </label>
+      <input type="text"
+      pInputText
+      class="w-full"
+      placeholder="Ingresar Email"
+      formControlName="email" />
+    </div>
+
+    <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+      <div *ngIf="email.hasError('required')">El correo es requerido.</div>
+      <div *ngIf="email.hasError('email')">Email no valido.</div>
+    </small>
+
+    <div class="field">
+      <label for="password">Contraseña</label>
+      <p-password
+        [toggleMask]="true"
+        class="w-full"
+        formControlName="password">
+
+      </p-password>
+
+    </div>
+    <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+      <div *ngIf="password.hasError('required')">La contraseña es requerida.</div>
+      <div *ngIf="password.hasError('password')">Contraseña no valida.</div>
+    </small>
+
+    <div class="field">
+      <label for="confirmPassword">Confirmar Contraseña</label>
+      <p-password
+        [toggleMask]="true"
+        class="w-full"
+        formControlName="confirmPassword">
+      </p-password>
+    </div>
+
+    <small *ngIf="confirmPassword.invalid && (confirmPassword.dirty || password.dirty)" class="block p-error">
+      <div *ngIf="confirmPassword.hasError('required')">La contraseña es requerida.</div>
+      <div *ngIf="password.value !== confirmPassword.value">Las contraseñas no coinciden.</div>
+    </small>
+
+
+
+    <button
+    pButton pRipple label="Registrar"
+    class="p-button-success"
+    class="w-full"
+    [disabled]="!registerForm.valid"
+    ></button>
+
+    <div class="mt-2">
+      <a routerLink="/login">Iniciar Sesion</a>
+    </div>
+  </p-card>
+
+
+
+</form>
