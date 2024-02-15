@@ -2,10 +2,9 @@
 
 Este proyecto esta generado con [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
-## Development server
+## Levantamiento del Server
 
 Corremos el comando `ng serve`. Navegamos a `http://localhost:4200/login`
-
 
 ## Code scaffolding
 
