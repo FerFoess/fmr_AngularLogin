@@ -51,7 +51,7 @@
 
     <small *ngIf="confirmPassword.invalid && (confirmPassword.dirty || password.dirty)" class="block p-error">
       <div *ngIf="confirmPassword.hasError('required')">La contraseña es requerida.</div>
-      <div *ngIf="password.value !== confirmPassword.value">Las contraseñas no coinciden.</div>
+      <div *ngIf="password.value != confirmPassword.value">Las contraseñas no coinciden.</div>
     </small>
 
 
