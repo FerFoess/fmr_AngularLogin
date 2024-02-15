@@ -1,10 +1,10 @@
 # AovcReviewGds0551
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Este proyecto esta generado con [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
-## Development server
+## Levantamiento del Server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Corremos el comando `ng serve`. Navegamos a `http://localhost:4200/login`
 
 ## Code scaffolding
 
