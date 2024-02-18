@@ -4,7 +4,7 @@ Este proyecto esta generado con [Angular CLI](https://github.com/angular/angular
 
 ## Levantamiento del Server
 
-Corremos el comando `ng serve`. Navegamos a `http://localhost:4200/login`
+Corremos el comando `ng serve`. Navegamos a `http://localhost:4200/`
 
 ## Code scaffolding
 
