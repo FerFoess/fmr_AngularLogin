@@ -23,6 +23,12 @@
       "fullName": "Tania",
       "email": "tania@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "a63d",
+      "fullName": "Fer Martinez",
+      "email": "fr663385@gmail.com",
+      "password": "$2a$10$z.c4R3goBTYajiBjrGs7qOn1bDNR16Nax5W8NaLkTQmqhOgzxT82a"
     }
   ]
 }

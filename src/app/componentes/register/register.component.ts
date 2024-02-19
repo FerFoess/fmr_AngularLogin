@@ -4,7 +4,7 @@ import { passwordMatchValidator } from '../../shared/password-match.directives';
 import { MessageService } from 'primeng/api';
 import { AuthService } from '../../services/auth.services';
 import { Router } from '@angular/router';
-
+import * as bcrypt from 'bcryptjs';
 import { User } from '../../interfaces/auth';
 
 @Component({
@@ -14,56 +14,66 @@ import { User } from '../../interfaces/auth';
 })
 export class RegisterComponent {
 
+  showPassword: boolean = false;
+  showConfirmPassword: boolean = false;
+
   registerForm = this.fb.group({
-      fullName: ['', [Validators.required, Validators.pattern, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
-      confirmPassword: ['', [Validators.required]]
+    fullName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]],
+    confirmPassword: ['', Validators.required]
   }, {
     validators: passwordMatchValidator
-  });
+  })
 
+  constructor(private fb: FormBuilder, private authService: AuthService, 
+    private mensaje: MessageService, private router:Router) { }
 
-  constructor(private fb: FormBuilder,
-    private authService:AuthService,
-    private mensaje: MessageService,
-    private router:Router
-    ){}
-
-  get fullName() {
+  get fullName(){
     return this.registerForm.controls['fullName'];
   }
 
-  get email() {
+  get email(){
     return this.registerForm.controls['email'];
   }
 
-  get password() {
+  get password(){
     return this.registerForm.controls['password'];
   }
 
-  get confirmPassword() {
+  get confirmPassword(){
     return this.registerForm.controls['confirmPassword'];
   }
 
-  enviarRegistro() {
-
-      const data = { ...this.registerForm.value };
-      delete data.confirmPassword;
-
-      this.authService.registerUser(data as User).subscribe(
-        response => {
-          console.log(response);
-          this.mensaje.add({ severity: 'success', summary: 'Success',
-            detail: 'Usuario registrado correctamente' });
-          this.router.navigate(['login']);
-        },
-        error => console.log(error)
-      );
-
+  enviarRegistro(){
+    const data = {...this.registerForm.value};
+  
+    delete data.confirmPassword;
+  
+    if (data.password) {
+      const hashedPassword = bcrypt.hashSync(data.password, 10);
+      data.password = hashedPassword;
+    }
+  
+    this.authService.registerUser(data as User).subscribe(
+      response => {
+        console.log(response)
+        this.mensaje.add({ severity: 'success', summary: 'Success',
+        detail: 'Registro Agregado'});
+        this.router.navigate(['login']);
+      },
+      error => console.log(error)
+    )
   }
-
-
+  
+  
+togglePasswordVisibility(field: string) {
+    if (field === 'password') {
+        this.showPassword = !this.showPassword;
+    } else if (field === 'confirmPassword') {
+        this.showConfirmPassword = !this.showConfirmPassword;
+    }
+}
 
 
 
