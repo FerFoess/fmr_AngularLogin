@@ -1,0 +1,9 @@
+.container {
+    position: relative;
+}
+
+#cerrarBtn {
+    position: absolute;
+    top: 5%; 
+    right: 5%; 
+}

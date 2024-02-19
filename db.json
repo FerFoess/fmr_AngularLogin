@@ -1,9 +1,27 @@
 {
   "users": [
     {
-      "id": "a3f4",
-      "fullName": "Alan",
-      "email": "alancito2013america@gmail.com",
+      "id": "a3f5",
+      "fullName": "Fer",
+      "email": "fr663385@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "f22e",
+      "fullName": "Fer",
+      "email": "fr663385@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "9aed",
+      "fullName": "Fernando",
+      "email": "fr@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "070c",
+      "fullName": "Tania",
+      "email": "tania@gmail.com",
       "password": "123"
     }
   ]

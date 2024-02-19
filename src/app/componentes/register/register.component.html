@@ -9,12 +9,12 @@
         formControlName="fullName"
         class="w-full"
         name="fullName"
-        placeholder="Nombre Completo"
+        placeholder=""
       />
     </div>
     <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="block p-error">
-      <div *ngIf="fullName.errors?.['required']">El nombre completo es requerido.</div>
-      <div *ngIf="fullName.errors?.['pattern']">Nombre debe ser válido.</div>
+      <div *ngIf="fullName.errors?.['required']">El nombre completo es requerido</div>
+      <div *ngIf="fullName.errors?.['pattern']">Nombre debe ser valido</div>
     </small>
 
     <div class="field">
@@ -25,11 +25,11 @@
         formControlName="email"
         class="w-full"
         name="email"
-        placeholder="Teclea tu Correo Electrónico"
+        placeholder=""
       />
       <div *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
-        <small *ngIf="email.errors?.['required']">Correo electrónico es requerido.</small>
-        <small *ngIf="email.errors?.['email']">Debe ser una dirección de correo electrónico válida.</small>
+        <small *ngIf="email.errors?.['required']">Correo electrónico es requerido</small>
+        <small *ngIf="email.errors?.['email']">Debe ser una dirección de correo electrónico válida</small>
       </div>
     </div>
 
@@ -41,10 +41,10 @@
         formControlName="password"
         class="w-full"
         name="password"
-        placeholder="Teclea tu contraseña"
+        placeholder=""
       />
       <div *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
-        <small *ngIf="password.errors?.['required']">La contraseña es requerida.</small>
+        <small *ngIf="password.errors?.['required']">Se requiere contraseña</small>
       </div>
     </div>
 
@@ -56,7 +56,7 @@
         formControlName="confirmPassword"
         class="w-full"
         name="confirmPassword"
-        placeholder="Confirmar Contraseña"
+        placeholder=""
       />
 
       <small
@@ -65,7 +65,7 @@
           class="block p-error">
 
         <div *ngIf="confirmPassword.errors?.['required']">
-          Confirmar Contraseña es requerida.
+          Confirmar contraseña
         </div>
 
       </small>
@@ -73,7 +73,7 @@
         class="block p-error"
           *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid"
         >
-          Las contraseñas no coinciden.
+          Las contraseñas no coinciden
       </small>
     </div>
 
@@ -86,7 +86,7 @@
 
 
     <div class="mt-2">
-      ¿Ya eres miembro? <a routerLink="/login">Inicia sesión aquí.</a>
+      ¿Ya tienes cuenta? <a routerLink="/login">Inicia sesión</a>
     </div>
 
   </p-card>
