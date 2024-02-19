@@ -15,7 +15,7 @@ Este comando debe ponerse abriendo el git bash en la carpeta que desees
 
 
 ## 🧩 Dependencias
-<h2 align="center"> 2.Instalar lo siguiente una vez creado el proyecto.</h2>
+<h2 align="center"> 2.Instalar lo siguiente una vez clonado el proyecto.</h2>
 
 **Descargar los node modules.**
 
@@ -32,9 +32,6 @@ Este comando debe ponerse abriendo el git bash en la carpeta que desees
 Para desplejar el proyecto en tu navegador web favorito deberas colocar el siguiente comando
 - ```ng serve –open```
 
-<br>
-
-<h3> **Una vez hecho estos pasos ya podras implementar codigo en tu proyecto dandole una bonita estructura** </h3>
 
 <br>
 <br>
