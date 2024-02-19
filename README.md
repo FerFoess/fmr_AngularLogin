@@ -1,16 +1,18 @@
 # LOGIN EN ANGULAR
 
 ## Requisitos
-NodeJS
-AngularCLI
+🟢NodeJS
+🔴AngularCLI
 
 ## Documentación 
 
-## 💻 Crear un nuevo proyecto de angular 
-En el Visual Studio Code abrir la terminal o desde tu CMD
+## 💻 Clonar el Repositorio
+en la terminal git bash usar el siguiente comando
 
-Usa el comando 
-- ```ng new gbr-shop --routing --style=css --skip-tests --standalone=false```
+```git clone https://github.com/111linblink/AplicacionesWeb.git```
+
+Este comando debe ponerse abriendo el git bash en la carpeta que desees 
+
 
 ## 🧩 Dependencias
 <h2 align="center"> 2.Instalar lo siguiente una vez creado el proyecto.</h2>
@@ -19,6 +21,11 @@ Usa el comando
 
 - ```npm install```
 
+**JSON Server**
+
+- ```json-server --watch db.json --port 8000```
+
+**Esto para definir el puerto del *JSON Server***
 
 
 ## 🌐 Desplejar el proyecto
@@ -36,8 +43,5 @@ Para desplejar el proyecto en tu navegador web favorito deberas colocar el sigui
 GDS0551
 # 😎 Alumno
 Fernando Martínez Rodríguez
-
-# Login Angular
-![image](https://github.com/FerFoess/fmr_AngularLogin/assets/135056080/3678fe5b-ee95-455e-af53-8da9bbd2447d){:width="300px"}
 
 
