@@ -38,5 +38,6 @@ GDS0551
 Fernando Martínez Rodríguez
 
 # Login Angular
-![image](https://github.com/FerFoess/fmr_AngularLogin/assets/135056080/3678fe5b-ee95-455e-af53-8da9bbd2447d)
+![image](https://github.com/FerFoess/fmr_AngularLogin/assets/135056080/3678fe5b-ee95-455e-af53-8da9bbd2447d){:width="300px"}
+
 
