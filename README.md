@@ -1,12 +1,42 @@
-# AovcReviewGds0551
+# LOGIN EN ANGULAR
 
-Este proyecto esta generado con [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+## Requisitos
+NodeJS
+AngularCLI
 
-## Levantamiento del Server
+## Documentación 
 
-Corremos el comando `ng serve`. Navegamos a `http://localhost:4200/`
+## 💻 Crear un nuevo proyecto de angular 
+En el Visual Studio Code abrir la terminal o desde tu CMD
 
-## Levantar Json-Server
+Usa el comando 
+- ```ng new gbr-shop --routing --style=css --skip-tests --standalone=false```
 
-En otra terminal ejecutamos el comando `json-server --watch db.json`
+## 🧩 Dependencias
+<h2 align="center"> 2.Instalar lo siguiente una vez creado el proyecto.</h2>
+
+**Descargar los node modules.**
+
+- ```npm install```
+
+
+
+## 🌐 Desplejar el proyecto
+Para desplejar el proyecto en tu navegador web favorito deberas colocar el siguiente comando
+- ```ng serve –open```
+
+<br>
+
+<h3> **Una vez hecho estos pasos ya podras implementar codigo en tu proyecto dandole una bonita estructura** </h3>
+
+<br>
+<br>
+
+# 🗿 Grupo
+GDS0551
+# 😎 Alumno
+Fernando Martínez Rodríguez
+
+# Login Angular
+![image](https://github.com/FerFoess/fmr_AngularLogin/assets/135056080/3678fe5b-ee95-455e-af53-8da9bbd2447d)
 
