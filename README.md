@@ -1,12 +1,44 @@
-# AovcReviewGds0551
+# LOGIN EN ANGULAR
 
-Este proyecto esta generado con [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+## Requisitos
+🟢NodeJS
+🔴AngularCLI
 
-## Levantamiento del Server
+## Documentación 
 
-Corremos el comando `ng serve`. Navegamos a `http://localhost:4200/`
+## 💻 Clonar el Repositorio
+en la terminal git bash usar el siguiente comando
 
-## Levantar Json-Server
+```git clone https://github.com/111linblink/AplicacionesWeb.git```
 
-En otra terminal ejecutamos el comando `json-server --watch db.json`
+Este comando debe ponerse abriendo el git bash en la carpeta que desees 
+
+
+## 🧩 Dependencias
+<h2 align="center"> 2.Instalar lo siguiente una vez clonado el proyecto.</h2>
+
+**Descargar los node modules.**
+
+- ```npm install```
+
+**JSON Server**
+
+- ```json-server --watch db.json --port 8000```
+
+**Esto para definir el puerto del *JSON Server***
+
+
+## 🌐 Desplejar el proyecto
+Para desplejar el proyecto en tu navegador web favorito deberas colocar el siguiente comando
+- ```ng serve –open```
+
+
+<br>
+<br>
+
+# 🗿 Grupo
+GDS0551
+# 😎 Alumno
+Fernando Martínez Rodríguez
+
 
